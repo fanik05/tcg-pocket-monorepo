@@ -1,0 +1,15 @@
+# Next.js / Node
+node_modules/
+.next/
+dist/
+.env*
+
+# Go
+bin/
+*.exe
+*.test
+api-executable
+
+# IDE / OS
+.DS_Store
+.vscode/
