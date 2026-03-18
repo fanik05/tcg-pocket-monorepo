@@ -1,5 +1,6 @@
 # Variables
 API_DIR = apps/api
+API_MAIN_DIR = $(API_DIR)/cmd/server
 WEB_DIR = apps/web
 
 # Default command
@@ -14,7 +15,11 @@ install:
 
 # Run the Go backend
 api-dev:
-	cd $(API_DIR) && go run main.go
+	cd $(API_MAIN_DIR) && go run main.go
+
+# Run the Go unit tests
+api-test:
+	cd $(API_DIR) && go test ./...
 
 # Run the Next.js frontend
 web-dev:
